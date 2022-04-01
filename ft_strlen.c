@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 #include "libft.h"
 size_t ft_strlen(const char *s)
-{	int i;
+{
+	int i;
 	i = 0;
 	unsigned long u;
 	u = 0;
@@ -20,5 +21,5 @@ size_t ft_strlen(const char *s)
 		u++;
 		i++;
 	}
-	return(u);
+	return (u);
 }

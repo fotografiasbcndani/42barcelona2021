@@ -13,19 +13,20 @@
 #include "libft.h"
 int ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	unsigned long	c;
-	unsigned char	*s1;
-	unsigned char	*s2;
+	unsigned long c;
+	unsigned char *s1;
+	unsigned char *s2;
 
-	s1 = (unsigned char *) str1;
-	s2 = (unsigned char *) str2;
+	s1 = (unsigned char *)str1;
+	s2 = (unsigned char *)str2;
 	c = 0;
 	if (n == c)
 	{
 		return (0);
 	}
-	else {
-		while(c < n)
+	else
+	{
+		while (c < n)
 		{
 			if (s1[c] == s2[c])
 			{

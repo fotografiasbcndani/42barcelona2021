@@ -13,13 +13,13 @@
 #include "libft.h"
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int				c;
-	unsigned int	y;
-	unsigned char	*st1;
-	unsigned char	*st2;
+	int c;
+	unsigned int y;
+	unsigned char *st1;
+	unsigned char *st2;
 
-	st1 = (unsigned char *) s1;
-	st2 = (unsigned char *) s2;
+	st1 = (unsigned char *)s1;
+	st2 = (unsigned char *)s2;
 	c = 0;
 	y = 0;
 	if (n == 0)
@@ -30,9 +30,9 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (y <= n)
 		{
-			write (1, &st1[c], 1);
-			write (1, &st2[c], 1);
-			write (1, "\n", 1);
+			write(1, &st1[c], 1);
+			write(1, &st2[c], 1);
+			write(1, "\n", 1);
 			y++;
 		}
 		c++;

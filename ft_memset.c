@@ -14,9 +14,9 @@ void *ft_memset(void *str, int c, size_t n)
 {
 	int u;
 	int len;
-	len = (int) n-1;
-	char* p;
-	p = (char*) str;
+	len = (int)n - 1;
+	char *p;
+	p = (char *)str;
 	u = 0;
 	while (len >= 0)
 	{
@@ -24,6 +24,6 @@ void *ft_memset(void *str, int c, size_t n)
 		u++;
 		len--;
 	}
-	str = (void*) p;
-	return(str);
+	str = (void *)p;
+	return (str);
 }

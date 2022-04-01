@@ -11,23 +11,22 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-void * ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	int i;
-	char * dest;
-	char * source;
+	char *dest;
+	char *source;
 	int len;
-	len = (int) n-1;
+	len = (int)n - 1;
 	i = 0;
-	dest = (char *) dst;
-	source = (char *) src;
-	while( len >= 0)
+	dest = (char *)dst;
+	source = (char *)src;
+	while (len >= 0)
 	{
-	dest[i] = source[i];
+		dest[i] = source[i];
 		i++;
 		len--;
 	}
-	 dst = (void * restrict) dest;
-return(dst);	
+	dst = (void *restrict)dest;
+	return (dst);
 }
-

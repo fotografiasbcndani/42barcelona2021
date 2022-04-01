@@ -10,21 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-void ft_bzero( void *dst, size_t n )
+void ft_bzero(void *dst, size_t n)
 {
 	unsigned long i;
-	char * dt;
-	dt = (char*) dst;
+	char *dt;
+	dt = (char *)dst;
 	i = 0;
-	
-	if (n != 0 )
+
+	if (n != 0)
 	{
-	   	while(i <= n)
+		while (i <= n)
 		{
 			dt[i] = 0;
 			i++;
 		}
 		dt[i] = '\0';
-		dst = (void*) dt;
+		dst = (void *)dt;
 	}
 }
