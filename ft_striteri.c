@@ -6,8 +6,12 @@
 /*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 21:47:39 by dchavez-          #+#    #+#             */
-/*   Updated: 2022/04/02 21:47:42 by dchavez-         ###   ########.fr       */
+/*   Updated: 2022/04/03 20:10:14 by dchavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*#include "libft.h"
+void 	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
 
-
+}
+*/

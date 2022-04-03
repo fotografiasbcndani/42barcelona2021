@@ -6,7 +6,7 @@
 /*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 22:50:20 by dchavez-          #+#    #+#             */
-/*   Updated: 2022/04/02 21:42:19 by dchavez-         ###   ########.fr       */
+/*   Updated: 2022/04/03 19:45:19 by dchavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t	ft_strlen(const char *s);
 void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero( void *s,size_t n );
 void 	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
-size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize);
 size_t	ft_strlcat(char *destination, const char *source, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);

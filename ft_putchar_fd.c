@@ -6,11 +6,11 @@
 /*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 21:48:04 by dchavez-          #+#    #+#             */
-/*   Updated: 2022/04/02 21:48:06 by dchavez-         ###   ########.fr       */
+/*   Updated: 2022/04/03 20:06:40 by dchavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 void ft_putchar_fd(char c, int fd)
 {
-    write(fd,c,1);
+    write(fd,&c,1);
 }

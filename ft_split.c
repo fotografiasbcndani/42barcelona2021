@@ -6,12 +6,14 @@
 /*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 21:46:42 by dchavez-          #+#    #+#             */
-/*   Updated: 2022/04/02 21:46:44 by dchavez-         ###   ########.fr       */
+/*   Updated: 2022/04/03 19:48:54 by dchavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char **ft_split(char const *s, char c)
+/*char **ft_split(char const *s, char c)
 {
-    char *res;
-    
-}
+   	char **res;
+	char *r;
+	*res = r
+    return(res);
+}*/

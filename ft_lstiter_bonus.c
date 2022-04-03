@@ -1,11 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/03 20:14:25 by dchavez-          #+#    #+#             */
+/*   Updated: 2022/04/03 20:14:30 by dchavez-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 void ft_lstiter(t_list *lst, void (*f)(void *))
 {
     t_list	*i;
 
-	if (!lst || !f)
-    //si no exiten ni la lista ni f retorna nulo
-		return NULL;
 	i = lst;
     //le asigno la lista a mi iterador
 	while (i)
@@ -14,4 +23,5 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 		(*f)(i->content);
 		i = i->next;
         free(i);
+	}
 }

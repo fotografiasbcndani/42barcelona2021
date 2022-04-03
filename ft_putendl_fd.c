@@ -6,12 +6,12 @@
 /*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 21:48:45 by dchavez-          #+#    #+#             */
-/*   Updated: 2022/04/02 21:48:47 by dchavez-         ###   ########.fr       */
+/*   Updated: 2022/04/03 19:53:42 by dchavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 void ft_putendl_fd(char *s, int fd)
 {
     ft_putstr_fd(s,fd);
-    write(fd,'\n',1);
+    write(fd,"\n",1);
 }
