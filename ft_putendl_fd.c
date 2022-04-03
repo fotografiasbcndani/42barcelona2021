@@ -9,5 +9,9 @@
 /*   Updated: 2022/04/02 21:48:47 by dchavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
+#include "libft.h"
+void ft_putendl_fd(char *s, int fd)
+{
+    ft_putstr_fd(s,fd);
+    write(fd,'\n',1);
+}
