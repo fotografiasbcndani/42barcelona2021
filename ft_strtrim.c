@@ -13,14 +13,20 @@
 /*char *ft_strtrim(char const *s1, char const *set)
 {
     char            *res;
+	unsigned long	first;
+	unsigned long	last;
     unsigned long   setlen;
+	unsigned long	len;
+	first = (unsigned long)ft_strrchr(set,s1);
+	last = (unsigned long) ft_strrchr(set,s1);
+	len = last-first+1;
     setlen=strlen(set)-1;
     if (2*setlen > ft_strlen(s1)-2*setlen)
         return(NULL);   
-    res=(char *)calloc(ft_strlen(s1)-ft_strlen(set),ft_strlen(s1)-2*setlen+2);
+    res=(char *)calloc(ft_strlen(s1)-ft_strlen(set),len+1);
     if (res==NULL)
         return(NULL);
-    ft_strlcpy(res,s1+setlen,ft_strlen(s1)-2*setlen+1);
+    ft_strlcpy(res,s1+setlen,len);
     return(res);
 }
 */
@@ -60,7 +66,9 @@ char *ft_strtrim(char const *s1, char const *set)
 	}
 	res=(char *)calloc(ft_strlen(s1),ft_strlen(s1)+1);
     if (res==NULL)
+	{
         return(NULL);
+	}
 	ft_strlcpy(res,s1,len);
 	return(res);
 }

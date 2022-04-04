@@ -18,13 +18,19 @@ char * ft_strnstr(const char *haystack, const char *needle, size_t len)
 	needl = ft_strlen(needle)-1;
 	u = 0;
 	if(haystack[u] == '\0')
+	{
 		return(NULL);
+	}
 	if(needle[u] == '\0')
+	{
 		return((char *)haystack);
+	}
 	while (u < len-needl && len > 0)
 	{
 		if (haystack[u] != needle[0])
-					u++;
+		{
+			u++;
+		}
 		else
 		{ 
 			if(haystack[u+needl] == needle[needl] && u+needl < len) 

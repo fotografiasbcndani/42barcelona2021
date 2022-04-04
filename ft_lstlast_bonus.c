@@ -17,7 +17,9 @@ t_list *ft_lstlast(t_list *lst)
     {
         // buscamos con next el ultimo elemento mientras se pueda recorrer la lista
         if (lst->next == NULL)
+        {
             return (lst);
+        }
         // mientras no se cumpla, seguimos recorriendo
         lst = lst->next;
     }

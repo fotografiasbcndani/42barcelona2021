@@ -44,14 +44,16 @@ char *ft_itoa(int n)
 	count+=ft_nmb(n);
     res=(char *)malloc(count+1);
     if(res == NULL)
-        return (NULL);
+	{
+		return (NULL);
+	}
 	res[count] = '\0';
-		while(n>0)
-		{
-			res[count-1] = n%10+'0';
-			n=n/10;
-			count--;
-		}
+	while(n>0)
+	{
+		res[count-1] = n%10+'0';
+		n=n/10;
+		count--;
+	}
 	if(neg == 1)
 	{
 		res[0]='-';
