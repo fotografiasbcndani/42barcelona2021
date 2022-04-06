@@ -11,19 +11,19 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-void ft_lstadd_back(t_list **lst, t_list *new)
-{
-    t_list *i;
 
-    // 	
-    if (*lst)
-    {
-        // a mi iterador le asigno el ultimo lugar de la lista y se asigno new allí
-        i = ft_lstlast(*lst);
-        i->next = new;
-    }
-    else
+void	ft_lstadd_back(t_list **lst, t_list *new)
+{
+	t_list	*i;
+
+	if (*lst)
 	{
-        *lst = new;
+// a mi iterador le asigno el ultimo lugar de la lista y se asigno new allí
+		i = ft_lstlast(*lst);
+		i -> next = new;
+	}
+	else
+	{
+		*lst = new;
 	}
 }

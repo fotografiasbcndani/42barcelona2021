@@ -10,38 +10,43 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char * ft_strnstr(const char *haystack, const char *needle, size_t len)
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	unsigned long	u;
 	size_t			needl;
-	char*			y;
-	needl = ft_strlen(needle)-1;
+	char			*y;
+
+	needl = ft_strlen(needle) - 1;
 	u = 0;
-	if(haystack[u] == '\0')
+	if (haystack[u] == '\0')
 	{
-		return(NULL);
+		return (NULL);
 	}
-	if(needle[u] == '\0')
+	if (needle[u] == '\0')
 	{
-		return((char *)haystack);
+		return ((char *)haystack);
 	}
-	while (u < len-needl && len > 0)
+	while (u < len - needl && len > 0)
 	{
 		if (haystack[u] != needle[0])
 		{
 			u++;
 		}
 		else
-		{ 
-			if(haystack[u+needl] == needle[needl] && u+needl < len) 
+		{
+			if (haystack[u + needl] == needle[needl] && u + needl < len)
 			{
 				y = (char *) haystack;
-				return(&y[u]);
+				return (&y[u]);
 			}
 			else
-				return(NULL);
+			{
+				return (NULL);
+			}
 		}
-	}	
-	return(NULL);
+		return (NULL);
+	}
+	y = (char *) haystack;
+	return (&y[u]);
 }
-

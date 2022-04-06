@@ -11,16 +11,18 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-void *ft_memmove(void *dest, const void *src, size_t n)
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int i;
-	char *p;
-	p = (char *)src;
+	int		i;
+	char	*p;
+
+	p = (char *) src;
 	if (!dest && !src)
 	{
 		return (NULL);
 	}
-	i = (int)n - 1;
+	i = (int )n - 1;
 	if (dest > src)
 	{
 		while (i >= 0)

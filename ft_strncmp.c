@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int				c;
 	unsigned int	y;
@@ -26,9 +27,9 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		return (0);
 	}
-	while (st1[c] == st2[c] && st1[c] != '\0' && st2[c]!= '\0')
+	while (st1[c] == st2[c] && st1[c] != '\0' && st2[c] != '\0')
 	{
-		if (y < n-1)
+		if (y < n - 1)
 		{
 			y++;
 		}

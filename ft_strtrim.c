@@ -30,45 +30,48 @@
     return(res);
 }
 */
-char *ft_moveleft(char	*s,int index)
+char	*ft_moveleft( char *s, int index)
 {
-				int z;
-				z=index;
-				while(s[z])
-				{
-				s[z] = s[z+1];
-				z++;
-				}
-				return(s);
+	int	z;
+
+	z = index;
+	while (s[z])
+	{
+		s[z] = s[z + 1];
+		z++;
+	}
+	return (s);
 }
-char *ft_strtrim(char const *s1, char const *set)
+
+char	*ft_strtrim( char const *s1, char const *set)
 {
 	char	*res;
-	int i;
-	int u;
-	int len;
-	i=0;
-	len= ft_strlen(s1)-1;
-	while(s1[i])
+	int		i;
+	int		u;
+	int		len;
+
+	i = 0;
+	len = ft_strlen(s1)-1;
+	while (s1[i])
 	{
-		u=0;
-		if(s1[i]==s1[i+1] || (s1[i] ==set[u] && s1[i+1]==set[u+1])
-				|| (s1[i] ==set[u+1] && s1[i+1]==set[u]))
+		u = 0;
+		if (s1[i] == s1[i + 1] || (s1[i] == set[u] && s1[i + 1] == set[u + 1])
+			|| (s1[i] == set[u + 1] && s1[i + 1] == set[u]))
 		{
-			while(s1[i]==set[u] && set[u] != '\0')
+			while (s1[i] == set[u] && set[u] != '\0')
 			{
-				ft_moveleft((char	*)s1,i);
-				i=0;
+				ft_moveleft((char *)s1, i);
+				i = 0;
 				u++;
 			}
 		}
 	i++;
 	}
-	res=(char *)calloc(ft_strlen(s1),ft_strlen(s1)+1);
-    if (res==NULL)
+	res = (char *) calloc(ft_strlen(s1), ft_strlen(s1) + 1);
+	if (res == NULL)
 	{
-        return(NULL);
+		return (NULL);
 	}
-	ft_strlcpy(res,s1,len);
-	return(res);
+	ft_strlcpy(res, s1, len);
+	return (res);
 }

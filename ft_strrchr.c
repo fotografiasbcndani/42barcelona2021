@@ -10,13 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char *ft_strrchr(const char *str, int c)
+
+char	*ft_strrchr(const char *str, int c)
 {
-	int i;
-	int len;
+	int	i;
+	int	len;
+
 	len = ft_strlen(str);
-	i=1;
-	while(i>0)
+	i = 1;
+	while (i > 0)
 	{
 		if (str[len] != c)
 		{
@@ -27,13 +29,13 @@ char *ft_strrchr(const char *str, int c)
 			i--;
 		}
 		else if (str[len] == c)
-			{
-				return((char*)&str[len]);
-			}
+		{
+			return ((char *) &str[len]);
+		}
 		else
 		{
-			return(NULL);
-		}	
+			return (NULL);
+		}
 	}
-		return(NULL);
+	return (NULL);
 }

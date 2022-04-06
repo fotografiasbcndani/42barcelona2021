@@ -10,19 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char * ft_strdup(const char *s1)
+
+char	*ft_strdup(const char *s1)
 {
-	char *res;
-	int len;
-	len = ft_strlen(s1)+1;
+	char	*res;
+	int		len;
+
+	len = ft_strlen(s1) + 1;
 	res = (char *)malloc(len);
-	if(res == NULL)
+	if (res == NULL)
 	{
-	 return (NULL);
+		return (NULL);
 	}
 	else
 	{
-		ft_strlcpy(res,s1,len);
+		ft_strlcpy(res, s1, len);
 		return (res);
 	}
 }

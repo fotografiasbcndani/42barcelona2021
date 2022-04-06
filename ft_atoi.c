@@ -10,31 +10,41 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-int ft_atoi(const char *str)
+
+void	isempty(const char*str)
 {
-	int i;
-	int n;
-	int res;
-	i=0;
-	n=1;
-	res=0;
-	while(str[i]=='\t'||str[i]=='\n'||str[i]=='\v'||str[i]=='\f'
-	||str[i]=='\r'||str[i]==' ')
+	int	i;
+
+	i = 0;
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f'
+		|| str[i] == '\r' || str[i] == ' ')
 		i++;
-	if(str[i]=='+')
+}
+
+int	ft_atoi(const char *str)
+{
+	int	i;
+	int	n;
+	int	res;
+
+	i = 0;
+	n = 1;
+	res = 0;
+	isempty(str);
+	if (str[i] == '+')
 		i++;
-	else if(str[i]=='-')
+	else if (str[i] == '-')
 	{
-		n=0;
+		n = 0;
 		i++;
 	}
-	while(ft_isdigit(str[i]) != 0)
-		{
-			res=res * 10 + str[i]-'0';
-			i++;
-		}
-	if(n == 1)
-		return(res);
+	while (ft_isdigit(str[i]) != 0)
+	{
+		res = res * 10 + str[i] - '0';
+		i++;
+	}
+	if (n == 1)
+		return (res);
 	else
-		return(res*-1);
+		return (res * -1);
 }
