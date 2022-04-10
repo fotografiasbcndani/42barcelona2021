@@ -6,17 +6,14 @@
 /*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 22:50:20 by dchavez-          #+#    #+#             */
-/*   Updated: 2022/04/03 19:45:19 by dchavez-         ###   ########.fr       */
+/*   Updated: 2022/04/10 20:53:18 by dchavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <string.h>
 # include <unistd.h>
-# include <limits.h>
 # include <stdlib.h>
-# include <ctype.h>
 # include <stdio.h>
 
 typedef struct s_list
@@ -24,6 +21,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -32,9 +30,8 @@ int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
-size_t	ft_strlcpy(char *restrict dst,
-			const char *restrict src, size_t dstsize);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *destination, const char *source, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
@@ -59,7 +56,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-//bonus
+
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -69,4 +66,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
 #endif

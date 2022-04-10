@@ -6,11 +6,11 @@
 #    By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/09 10:07:08 by dchavez-          #+#    #+#              #
-#    Updated: 2022/04/03 21:07:57 by dchavez-         ###   ########.fr        #
+#    Updated: 2022/04/10 20:20:15 by dchavez-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME = libft.a
-# archivos tipo c #
+
 SRCS		=	ft_atoi.c				\
 				ft_bzero.c				\
 				ft_calloc.c				\
@@ -41,7 +41,10 @@ SRCS		=	ft_atoi.c				\
 				ft_strtrim.c			\
 				ft_substr.c				\
 				ft_tolower.c			\
-				ft_toupper.c
+				ft_strmapi.c			\
+				ft_striteri.c			\
+				ft_toupper.c			\
+				ft_split.c
 BSRCS		=	ft_lstadd_back_bonus.c	\
 				ft_lstadd_front_bonus.c	\
 				ft_lstclear_bonus.c		\

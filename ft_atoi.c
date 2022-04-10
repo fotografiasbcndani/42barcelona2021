@@ -6,12 +6,12 @@
 /*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 23:15:21 by dchavez-          #+#    #+#             */
-/*   Updated: 2022/04/02 20:05:30 by dchavez-         ###   ########.fr       */
+/*   Updated: 2022/04/10 13:59:07 by dchavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	isempty(const char*str)
+int	isempty(const char*str)
 {
 	int	i;
 
@@ -19,6 +19,7 @@ void	isempty(const char*str)
 	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f'
 		|| str[i] == '\r' || str[i] == ' ')
 		i++;
+	return (i);
 }
 
 int	ft_atoi(const char *str)
@@ -27,10 +28,9 @@ int	ft_atoi(const char *str)
 	int	n;
 	int	res;
 
-	i = 0;
 	n = 1;
 	res = 0;
-	isempty(str);
+	i = isempty(str);
 	if (str[i] == '+')
 		i++;
 	else if (str[i] == '-')
