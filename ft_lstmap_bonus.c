@@ -6,7 +6,7 @@
 /*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/03 20:16:26 by dchavez-          #+#    #+#             */
-/*   Updated: 2022/04/03 20:26:54 by dchavez-         ###   ########.fr       */
+/*   Updated: 2022/04/11 16:51:43 by dchavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		i = lst;
 		res = ft_lstnew((*f)(i -> content));
 		if (res == NULL)
-		{
 			return (NULL);
-		}
 		i = i-> next;
 		while (i)
 		{

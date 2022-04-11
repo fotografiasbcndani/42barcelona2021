@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/11 16:47:25 by dchavez-          #+#    #+#             */
+/*   Updated: 2022/04/11 16:48:05 by dchavez-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
@@ -9,9 +21,7 @@ t_list	*ft_lstnew(void *content)
 	{
 		return (NULL);
 	}
-//asignamos a la lista los contenidos
 	res -> content = content;
-//finalizamos la lista con un 0 y la retornamos
-	res -> next = 0;
+	res -> next = NULL;
 	return (res);
 }

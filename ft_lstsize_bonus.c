@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/11 16:52:01 by dchavez-          #+#    #+#             */
+/*   Updated: 2022/04/11 16:52:17 by dchavez-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	ft_lstsize(t_list *lst)
@@ -7,7 +19,6 @@ int	ft_lstsize(t_list *lst)
 	i = 0;
 	while (lst)
 	{
-// recorro la lista
 		lst = lst -> next;
 		i++;
 	}
