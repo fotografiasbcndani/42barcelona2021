@@ -6,7 +6,7 @@
 /*   By: dchavez- <dchavez-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 21:46:07 by dchavez-          #+#    #+#             */
-/*   Updated: 2022/04/10 17:41:06 by dchavez-         ###   ########.fr       */
+/*   Updated: 2022/09/06 15:07:14 by dchavez-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,7 +19,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*res;
 
 	i = 0;
-	o = ft_strlen(s1);
+	o = ft_strlen(s1) - 1;
+	if (!s1 || !set)
+		return (NULL);
 	while (s1[i] && ft_strchr(set, s1[i]))
 	{
 		i++;
@@ -29,12 +31,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		o --;
 	}
 	len = o - i + 1;
-	res = (char *)malloc((len) * sizeof(char));
-	if (res == NULL)
-		return (NULL);
-	if (len <= 0)
-		return (ft_calloc(1, 1));
-	res[len] = '\0';
 	res = ft_substr(s1, i, len);
 	return (res);
 }
